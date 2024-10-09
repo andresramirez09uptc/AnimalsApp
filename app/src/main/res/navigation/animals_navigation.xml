@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/animals_navigation"
+    app:startDestination="@id/animals">
+
+    <fragment
+        android:id="@+id/cats"
+        android:name="com.task.animalsapp.Cats"
+        android:label="fragment_cats"
+        tools:layout="@layout/fragment_cats" >
+        <action
+            android:id="@+id/action_cats_to_dogs"
+            app:destination="@id/dogs" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogs"
+        android:name="com.task.animalsapp.Dogs"
+        android:label="fragment_dogs"
+        tools:layout="@layout/fragment_dogs" >
+        <action
+            android:id="@+id/action_dogs_to_tigers"
+            app:destination="@id/tigers" />
+    </fragment>
+    <fragment
+        android:id="@+id/animals"
+        android:name="com.task.animalsapp.Animals"
+        android:label="fragment_animals"
+        tools:layout="@layout/fragment_animals" >
+        <action
+            android:id="@+id/action_animals2_to_cats"
+            app:destination="@id/cats" />
+    </fragment>
+    <fragment
+        android:id="@+id/tigers"
+        android:name="com.task.animalsapp.Tigers"
+        android:label="fragment_tigers"
+        tools:layout="@layout/fragment_tigers" >
+        <action
+            android:id="@+id/action_tigers_to_animals2"
+            app:destination="@id/animals" />
+    </fragment>
+</navigation>
